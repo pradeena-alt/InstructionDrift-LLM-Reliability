@@ -1,0 +1,24 @@
+run_name: tiny_pilot
+seed: 7
+n_scenarios: 20
+n_turns: 30
+densities: [0.0, 0.3, 0.6]
+split_fracs: [0.5, 0.2, 0.3]
+workers: 1
+
+backend: openai_compat
+model: qwen2.5:1.5b
+base_url: http://localhost:11434/v1
+api_key_env: ""
+temperature: 0.0
+max_tokens: 300
+request_sleep: 0.0
+retries: 5
+cache_path: results/cache.sqlite
+
+baseline_policies: [P0, P1, P2_k3, P2_k5, P2_k10, P3]
+risk_model: logreg
+taus: [0.02, 0.05, 0.10, 0.20, 0.35]
+target_ratio: 0.95
+
+mock_rate_scale: 0.5

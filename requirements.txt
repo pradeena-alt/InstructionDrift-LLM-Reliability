@@ -1,0 +1,10 @@
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+pyyaml
+requests
+joblib
+tqdm        # optional (progress bars)
+pytest      # optional (tests)
